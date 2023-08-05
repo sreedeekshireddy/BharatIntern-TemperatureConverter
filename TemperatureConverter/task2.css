@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgb(196, 26, 145) 0%, rgba(245, 240, 242, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    font-family: monospace, sans-serif;
+    color: rgb(196, 26, 145);
+}
+.container {
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    max-width: 800px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading {
+    font-size: 32px;
+}
+.container2{
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+input {
+    width: 60%;
+    font-family: monospace;
+    padding: 5px;
+    outline: none;
+    background: linear-gradient(90deg, rgb(77, 213, 23) 0%, rgba(245, 240, 242, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: whitesmoke;
+    font-size: 18px;
+}
+input::placeholder {
+    color: black;
+}

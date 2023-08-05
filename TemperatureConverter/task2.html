@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Temperature Converter </h1>
+        <div class="container2">
+            <label for="Celcius">Celcius(°C)</label>
+            <input 
+            onchange ="TempConvert(event)"
+            type="number" 
+            name="Celcius" 
+            id="Celcius" 
+            class="Celcius" 
+            placeholder="Enter Temperature in Celcius"/>    
+        </div>
+        <div class="container2">
+            <label for="Fahrenheit">Fahrenheit(°F)</label>
+            <input 
+            onchange="TempConvert(event)"
+            type="number" 
+            name="Fahrenheit" 
+            id="Fahrenheit" 
+            class="Fahrenheit" 
+            placeholder="Enter Temperature in Fahrenheit"/>    
+        </div>
+        <div class="container2">
+            <label for="Kelvin">Kelvin(K)</label>
+            <input 
+            onchange="TempConvert(event)"
+            type="number" 
+            name="Kelvin" 
+            id="Kelvin" 
+            class="Kelvin" 
+            placeholder="Enter Temperature in Kelvin"/>    
+        </div>
+    </div>
+    <script>
+           const celcius=document.getElementById("Celcius");
+           const fahrenheit=document.getElementById("Fahrenheit");
+           const kelvin=document.getElementById("Kelvin");
+           function TempConvert(event) {
+                    const currentValue = event.target.value;
+           switch (event.target.name) {
+                    case "Celcius":
+                            fahrenheit.value = (currentValue * 9 / 5) + 32;
+                            kelvin.value = parseFloat(currentValue) + 273.15;
+                    break;
+                    case "Fahrenheit":
+                           celcius.value = (currentValue - 32) * 5 / 9;
+                           kelvin.value = (currentValue - 32) * 5 / 9 + 273.15;
+                    break;
+                    case "Kelvin":
+                           celcius.value = currentValue - 273.15;
+                           fahrenheit.value = (currentValue - 273.15) * 9 / 5 + 32;
+                    break;
+                    default:
+                    break;
+    }
+}
+    </script>
+</body>
+</html>
